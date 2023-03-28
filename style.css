@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap');
+.bodyfont {
+    font-family: 'Rubik', sans-serif;
+    position: relative;
+    /* overflow-x: hidden; */
+}
+.rb {
+    border: 2px solid red;
+}
+.profpic, .bi_forms{
+    width: 100%;
+}
+.profpic {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.cprtext {
+    padding: 0;
+    margin: 0;
+}
+.cprinput {
+    padding: 10px;
+    /* display: flex;
+    flex-direction: column;
+    align-items: center; */
+}
+.cprinput input {
+    height: 20px;
+    width: 98%;
+}
+.baseinfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.baseinfo img {
+    width: 70%;
+    padding: 5px;
+}
+.cardbutton {
+    text-decoration: none;
+    color: white;
+    background-color: red;
+    width: 100%;
+    padding: 5px;
+    margin: 0;
+    text-align: center;
+}
+.mpblock {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+.cpr_mpinput {
+    width:60px;
+    padding:5px;
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
