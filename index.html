@@ -11,33 +11,67 @@
     <title>CPR Form Page</title>
 </head>
 <body class="bodyfont">
-    <header></header>
+    <header style="display: flex; flex-direction: row-reverse; background-color: red; position: sticky; top: 0;">
+        <a style="padding: 5px;" href="#"><img src="hamburger.png" alt="" style="height: 50px;"></a>
+    </header>
     <main style="margin:0;">
         <div class="baseinfo rb">
             <div class="profpic rb"><img src="pic.jpg" alt=""></div>
+            <!-- Базовая информация -->
             <div class="bi_forms rb">
+                <!-- Имя -->
                 <div class="cprinput rb">
                     <p class="cprtext">Имя</p>
                     <input type="text">
                 </div>
+                <!-- Роль -->
                 <div class="cprinput rb">
                     <p class="cprtext">Роль</p>
                     <input type="text">
                 </div>
-                <div class="cprinput rb">
-                    <p class="cprtext">Особая способность</p>
+                <!-- Особая способность и ее ранг -->
+                <div class="cprinput rb" style="display: flex; flex-direction: row; align-items: center;">
+                    <p class="cprtext" style="padding: 4px;">Особая способность</p>
+                    <input type="text">
+                    <p class="cprtext" style="padding: 4px;">Ранг</p>
                     <input type="text">
                 </div>
+                <!-- Заметки -->
                 <div class="cprinput rb">
                     <p class="cprtext">Заметки</p>
                     <textarea style="width:98%;" name="note" id="note" cols="30" rows="4"></textarea>
                 </div>
+                <!-- Пункты человечности -->
                 <div class="cprinput rb" style="display: flex; flex-direction: row; align-items: center;">
-                    <p style="padding: 3px;" class="cprtext">Человечность</p>
+                    <p style="padding: 4px;" class="cprtext">Человечность</p>
                     <input type="text">
-                    <p class="cprtext" style="padding: 3px;">из</p>
+                    <p class="cprtext" style="padding: 4px;">из</p>
                     <input type="text">
                 </div>
+                <!-- Пункты здоровья -->
+                <div class="cprinput rb" style="display: flex; flex-direction: row; align-items: center;">
+                    <p style="padding: 4px;" class="cprtext">Пункты здоровья</p>
+                    <input type="text">
+                    <p class="cprtext" style="padding: 4px;">из</p>
+                    <input type="text">
+                </div>
+                <!-- Тяжелое ранение -->
+                <div class="cprinput rb">
+                    <p class="cprtext">Тяжелое ранение</p>
+                    <input type="text">
+                    <p class="cprtext" style="width:98%; color: white; background-color: red; padding: 5px; text-align: center; border: 1px solid black;">-2 на все действия с Тяжелым Ранением</p>
+                </div>
+                <!-- Зависимости -->
+                <div class="cprinput rb">
+                    <p class="cprtext">Зависимости</p>
+                    <textarea style="width:98%;" name="note" id="note" cols="30" rows="4"></textarea>
+                </div>
+                <!-- Критические травмы -->
+                <div class="cprinput rb">
+                    <p class="cprtext">Заметки</p>
+                    <textarea style="width:98%;" name="note" id="note" cols="30" rows="4"></textarea>
+                </div>
+                <!-- Основные параметры -->
                 <div class="cprinput rb">
                     <button class="cardbutton" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
                         Основные параметры
@@ -86,7 +120,137 @@
                             </div>
                         </div>
                     </div>
-                    <!--  -->
+                </div>
+                <!-- Оружие и броня -->
+                <div class="cprinput rb">
+                    <h2 style="text-align: center;">Оружие и броня</h2>
+                    <table class="rb" style="width:100%;">
+                        <tr class="rb">
+                            <td colspan="3" class="fb rb">Броня</td>
+                            <td class="fb rb">ОС</td>
+                            <td class="fb rb">Штраф</td>
+                        </tr>
+                        <tr class="rb">
+                            <td colspan="3" class="rb">Защита головы</td>
+                            <td class="rb"><input type="text"></td>
+                            <td class="rb"><input type="text"></td>
+                        </tr>
+                        <tr class="rb">
+                            <td colspan="3" class="rb">Защита туловища</td>
+                            <td class="rb"><input type="text"></td>
+                            <td class="rb"><input type="text"></td>
+                        </tr>
+                        <tr class="rb">
+                            <td colspan="3" class="rb">Щит</td>
+                            <td class="rb"><input type="text"></td>
+                            <td class="rb"><input type="text"></td>
+                        </tr>
+                    </table>
+                    <p class="cprtext" style="width:100%; color: white; background-color: red; padding: 5px; text-align: center; border: 1px solid black;">Штрафы применяются к РЕА, ЛВК и СКО</p>
+                    <!-- Оружие -->
+                    <button style="margin-top: 10px; width: 100%;" class="cardbutton" data-bs-toggle="collapse" href="#collapseWeapon" role="button" aria-expanded="false" aria-controls="collapseExample">
+                        Оружие
+                    </button>
+                    <div class="collapse" id="collapseWeapon">
+                        <table style="width:100%;">
+                            <tr>
+                                <td colspan="4" class="fb rb">Оружие</td>
+                                <td colspan="1" class="fb rb">Урон</td>
+                                <td colspan="1" class="fb rb">Боеприпасы</td>
+                                <td colspan="1" class="fb rb">ROF</td>
+                                <td colspan="4" class="fb rb">Заметки</td>
+                            </tr>
+                            <tr>
+                                <td colspan="4" class="rb"><input type="text"></td>
+                                <td colspan="1" class="rb"><input type="text"></td>
+                                <td colspan="1" class="rb"><input type="text"></td>
+                                <td colspan="1" class="rb"><input type="text"></td>
+                                <td colspan="4" class="rb"><input type="text"></td>
+                            </tr>
+                            <tr>
+                                <td colspan="4" class="rb"><input type="text"></td>
+                                <td colspan="1" class="rb"><input type="text"></td>
+                                <td colspan="1" class="rb"><input type="text"></td>
+                                <td colspan="1" class="rb"><input type="text"></td>
+                                <td colspan="4" class="rb"><input type="text"></td>
+                            </tr>
+                            <tr>
+                                <td colspan="4" class="rb"><input type="text"></td>
+                                <td colspan="1" class="rb"><input type="text"></td>
+                                <td colspan="1" class="rb"><input type="text"></td>
+                                <td colspan="1" class="rb"><input type="text"></td>
+                                <td colspan="4" class="rb"><input type="text"></td>
+                            </tr>
+                            <tr>
+                                <td colspan="4" class="rb"><input type="text"></td>
+                                <td colspan="1" class="rb"><input type="text"></td>
+                                <td colspan="1" class="rb"><input type="text"></td>
+                                <td colspan="1" class="rb"><input type="text"></td>
+                                <td colspan="4" class="rb"><input type="text"></td>
+                            </tr>
+                            <tr>
+                                <td colspan="4" class="rb"><input type="text"></td>
+                                <td colspan="1" class="rb"><input type="text"></td>
+                                <td colspan="1" class="rb"><input type="text"></td>
+                                <td colspan="1" class="rb"><input type="text"></td>
+                                <td colspan="4" class="rb"><input type="text"></td>
+                            </tr>
+                            <tr>
+                                <td colspan="4" class="rb"><input type="text"></td>
+                                <td colspan="1" class="rb"><input type="text"></td>
+                                <td colspan="1" class="rb"><input type="text"></td>
+                                <td colspan="1" class="rb"><input type="text"></td>
+                                <td colspan="4" class="rb"><input type="text"></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <!-- Дополнительные навыки -->
+                <div class="cprinput rb">
+                    <h2 style="text-align: center;">Дополнительные навыки</h2>
+                    <button class="cardbutton" data-bs-toggle="collapse" href="#collapseVS" role="button" aria-expanded="false" aria-controls="collapseExample">
+                        Навыки восприятия
+                    </button>
+                    <div class="collapse" id="collapseVS">
+                        <table class="rb" style="width:100%;">
+                            <tr class="rb">
+                                <td colspan="5" class="fb rb">Название</td>
+                                <td class="fb rb">УР</td>
+                                <td class="fb rb">STAT</td>
+                                <td class="fb rb">Сумм</td>
+                            </tr>
+                            <tr class="rb">
+                                <td colspan="5" class="rb"><strong>Концентрация (ВОЛЯ)</strong></td>
+                                <td class="rb"><input type="text" style="width: 100%;"></td>
+                                <td class="rb"><input type="text" style="width: 100%;"></td>
+                                <td class="rb"><input type="text" style="width: 100%;"></td>
+                            </tr>
+                            <tr class="rb">
+                                <td colspan="5" class="rb">Скрытие/ Раскрытие объекта (ИНТ)</td>
+                                <td class="rb"><input type="text" style="width: 100%;"></td>
+                                <td class="rb"><input type="text" style="width: 100%;"></td>
+                                <td class="rb"><input type="text" style="width: 100%;"></td>
+                            </tr>
+                            <tr class="rb">
+                                <td colspan="5" class="rb">Чтение по губам (ИНТ)</td>
+                                <td class="rb"><input type="text" style="width: 100%;"></td>
+                                <td class="rb"><input type="text" style="width: 100%;"></td>
+                                <td class="rb"><input type="text" style="width: 100%;"></td>
+                            </tr>
+                            <tr class="rb">
+                                <td colspan="5" class="rb"><strong>Внимательность (ИНТ)</strong></td>
+                                <td class="rb"><input type="text" style="width: 100%;"></td>
+                                <td class="rb"><input type="text" style="width: 100%;"></td>
+                                <td class="rb"><input type="text" style="width: 100%;"></td>
+                            </tr>
+                            <tr class="rb">
+                                <td colspan="5" class="rb">Выслеживание (ИНТ)</td>
+                                <td class="rb"><input type="text" style="width: 100%;"></td>
+                                <td class="rb"><input type="text" style="width: 100%;"></td>
+                                <td class="rb"><input type="text" style="width: 100%;"></td>
+                            </tr>
+                        </table>
+                    </div>
                 </div>
             </div>
         </div>
