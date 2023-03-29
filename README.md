@@ -12,5 +12,5 @@ ____
 * Списки для покупки основного снаряжения (из Корбука)
 ____
 # Поддержка
-[Донаты](https://www.donationalerts.com/r/ine1t)
-[Мой ТГ канал](https://t.me/justne1tral)
+- [Донаты](https://www.donationalerts.com/r/ine1t)
+- [Мой ТГ канал](https://t.me/justne1tral)
