@@ -7,8 +7,8 @@ ____
 ____
 # Фото работы
 ![Первое фото](https://github.com/iNe1t/CyberpunkRedApp/blob/master/pics/forreadme1.jpg "Орк")
-![Второе фото]( "Орк")
-![Третье фото]( "Орк")
+![Второе фото](https://github.com/iNe1t/CyberpunkRedApp/blob/master/pics/forreadme2.jpg "Орк")
+![Третье фото](https://github.com/iNe1t/CyberpunkRedApp/blob/master/pics/forreadme3.jpg "Орк")
 ____
 # Планы
 * Основные моменты для игры (по Корбуку)
