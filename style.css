@@ -29,6 +29,8 @@
 .cprinput input {
     height: 100%;
     width: 100%;
+}
+.nb input{
     border: none;
 }
 .baseinfo {

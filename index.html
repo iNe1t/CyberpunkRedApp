@@ -24,6 +24,11 @@
                     <p class="cprtext">Имя</p>
                     <input type="text">
                 </div>
+                <!-- Псевдонимы -->
+                <div class="cprinput rb">
+                    <p class="cprtext">Псевдонимы</p>
+                    <textarea style="width:100%;" name="note" id="note" cols="30" rows="4"></textarea>
+                </div>
                 <!-- Роль -->
                 <div class="cprinput rb">
                     <p class="cprtext">Роль</p>
@@ -129,7 +134,7 @@
                 <!-- Оружие и броня -->
                 <div class="cprinput rb">
                     <h2 style="text-align: center;">Оружие и броня</h2>
-                    <table class="rb" style="width:100%;">
+                    <table class="nb rb" style="width:100%;">
                         <tr class="rb">
                             <td colspan="3" class="fb rb">Броня</td>
                             <td class="fb rb">ОС</td>
@@ -218,7 +223,7 @@
                         Навыки восприятия
                     </button>
                     <div class="collapse" id="collapseVS">
-                        <table class="rb" style="width:100%;">
+                        <table class="nb rb" style="width:100%;">
                             <tr class="rb">
                                 <td colspan="5" class="fb rb">Название</td>
                                 <td class="fb rb">УР</td>
@@ -262,7 +267,7 @@
                         Физические навыки
                     </button>
                     <div class="collapse" id="collapsePS">
-                        <table class="rb" style="width:100%;">
+                        <table class="nb rb" style="width:100%;">
                             <tr class="rb">
                                 <td colspan="5" class="fb rb">Название</td>
                                 <td class="fb rb">УР</td>
@@ -313,7 +318,7 @@
                         Навыки управления
                     </button>
                     <div class="collapse" id="collapseCS">
-                        <table class="rb" style="width:100%;">
+                        <table class="nb rb" style="width:100%;">
                             <tr class="rb">
                                 <td colspan="5" class="fb rb">Название</td>
                                 <td class="fb rb">УР</td>
@@ -351,7 +356,7 @@
                         Образовательные навыки
                     </button>
                     <div class="collapse" id="collapseES">
-                        <table class="rb" style="width:100%;">
+                        <table class="nb rb" style="width:100%;">
                             <tr class="rb">
                                 <td colspan="5" class="fb rb">Название</td>
                                 <td class="fb rb">УР</td>
@@ -500,7 +505,7 @@
                         Навыки ближнего боя
                     </button>
                     <div class="collapse" id="collapseMS">
-                        <table class="rb" style="width:100%;">
+                        <table class="nb rb" style="width:100%;">
                             <tr class="rb">
                                 <td colspan="5" class="fb rb">Название</td>
                                 <td class="fb rb">УР</td>
@@ -539,7 +544,7 @@
                         Сценические навыки
                     </button>
                     <div class="collapse" id="collapseSceneS">
-                        <table class="rb" style="width:100%;">
+                        <table class="nb rb" style="width:100%;">
                             <tr class="rb">
                                 <td colspan="5" class="fb rb">Название</td>
                                 <td class="fb rb">УР</td>
@@ -575,7 +580,7 @@
                         Навыки дальнего боя
                     </button>
                     <div class="collapse" id="collapseLRS">
-                        <table class="rb" style="width:100%;">
+                        <table class="nb rb" style="width:100%;">
                             <tr class="rb">
                                 <td colspan="5" class="fb rb">Название</td>
                                 <td class="fb rb">УР</td>
@@ -620,7 +625,7 @@
                         Социальные навыки
                     </button>
                     <div class="collapse" id="collapseSocialS">
-                        <table class="rb" style="width:100%;">
+                        <table class="nb rb" style="width:100%;">
                             <tr class="rb">
                                 <td colspan="5" class="fb rb">Название</td>
                                 <td class="fb rb">УР</td>
@@ -694,7 +699,7 @@
                         Технические навыки
                     </button>
                     <div class="collapse" id="collapseTechS">
-                        <table class="rb" style="width:100%;">
+                        <table class="nb rb" style="width:100%;">
                             <tr class="rb">
                                 <td colspan="5" class="fb rb">Название</td>
                                 <td class="fb rb">УР</td>
@@ -795,6 +800,93 @@
 
                     </div>
                 </div>
+            <!-- Жизненный путь и пр. (2 лист ЛП) -->
+            <div class="bi_forms rb">
+                <!-- Репутация -->
+                <div class="cprinput rb">
+                    <h2 style="text-align: center;">Жизненный путь и пр.</h2>
+                    <p class="cprtext">Репутация</p>
+                    <input type="text">
+                </div>
+                <!-- Приобретение репутации -->
+                <div class="cprinput rb">
+                    <p class="cprtext">Приобретение репутации</p>
+                    <textarea style="width:100%;" name="note" id="note" cols="30" rows="4"></textarea>
+                </div>
+                <!-- Пункты улучшений -->
+                <div class="cprinput rb" style="display: flex; flex-direction: row; align-items: center;">
+                    <p style="padding: 4px;" class="cprtext">Пункты улучшений</p>
+                    <input type="text">
+                    <p class="cprtext" style="padding: 4px;">из</p>
+                    <input type="text">
+                </div>
+                <!-- Жизненный путь -->
+                <div class="cprinput rb">
+                    <h2 style="text-align: center;"><strong>ЖИЗНЕННЫЙ ПУТЬ</strong></h2>
+                    <table class="rb" style="width:100%;">
+                        <tr class="rb">
+                            <td class="rb">
+                                <p style="padding: 5px; text-align: center;" class="cprtext">Культурное наследие</p>
+                                <textarea style="width:100%;" name="note" id="note" cols="15" rows="2"></textarea>
+                            </td>
+                            <td class="rb">
+                                <p style="padding: 5px; text-align: center;" class="cprtext">Личность</p>
+                                <textarea style="width:100%;" name="note" id="note" cols="15" rows="2"></textarea>
+                            </td>
+                        </tr>
+                        <tr class="rb">
+                            <td class="rb">
+                                <p style="padding: 5px; text-align: center;" class="cprtext">Стиль одежды</p>
+                                <textarea style="width:100%;" name="note" id="note" cols="15" rows="2"></textarea>
+                            </td>
+                            <td class="rb">
+                                <p style="padding: 5px; text-align: center;" class="cprtext">Прическа</p>
+                                <textarea style="width:100%;" name="note" id="note" cols="15" rows="2"></textarea>
+                            </td>
+                        </tr>
+                        <tr class="rb">
+                            <td class="rb">
+                                <p style="padding: 5px; text-align: center;" class="cprtext">Что ты ценишь больше всего?</p>
+                                <textarea style="width:100%;" name="note" id="note" cols="15" rows="2"></textarea>
+                            </td>
+                            <td class="rb">
+                                <p style="padding: 5px; text-align: center;" class="cprtext">Отношение к людям</p>
+                                <textarea style="width:100%;" name="note" id="note" cols="15" rows="2"></textarea>
+                            </td>
+                        </tr>
+                        <tr class="rb">
+                            <td class="rb">
+                                <p style="padding: 5px; text-align: center;" class="cprtext">Самый близкий человек</p>
+                                <textarea style="width:100%;" name="note" id="note" cols="15" rows="2"></textarea>
+                            </td>
+                            <td>
+                                <p style="padding: 5px; text-align: center;" class="cprtext">Самое ценное, чем ты обладаешь</p>
+                                <textarea style="width:100%;" name="note" id="note" cols="15" rows="2"></textarea>
+                            </td>
+                        </tr>
+                        <tr class="rb">
+                            <td class="rb">
+                                <p style="padding: 5px; text-align: center;" class="cprtext">История семьи</p>
+                                <textarea style="width:100%;" name="note" id="note" cols="15" rows="2"></textarea>
+                            </td>
+                            <td class="rb">
+                                <p style="padding: 5px; text-align: center;" class="cprtext">Среда, в которой прошло детство</p>
+                                <textarea style="width:100%;" name="note" id="note" cols="15" rows="2"></textarea>
+                            </td>
+                        </tr>
+                        <tr class="rb">
+                            <td class="rb">
+                                <p style="padding: 5px; text-align: center;" class="cprtext">Семейный кризис</p>
+                                <textarea style="width:100%;" name="note" id="note" cols="15" rows="2"></textarea>
+                            </td>
+                            <td class="rb">
+                                <p style="padding: 5px; text-align: center;" class="cprtext">Жизненные цели</p>
+                                <textarea style="width:100%;" name="note" id="note" cols="15" rows="2"></textarea>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
             </div>
         </div>
     </main>
