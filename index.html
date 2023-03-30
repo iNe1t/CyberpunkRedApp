@@ -39,7 +39,7 @@
                 <!-- Заметки -->
                 <div class="cprinput rb">
                     <p class="cprtext">Заметки</p>
-                    <textarea style="width:98%;" name="note" id="note" cols="30" rows="4"></textarea>
+                    <textarea style="width:100%;" name="note" id="note" cols="30" rows="4"></textarea>
                 </div>
                 <!-- Пункты человечности -->
                 <div class="cprinput rb" style="display: flex; flex-direction: row; align-items: center;">
@@ -59,17 +59,22 @@
                 <div class="cprinput rb">
                     <p class="cprtext">Тяжелое ранение</p>
                     <input type="text">
-                    <p class="cprtext" style="width:98%; color: white; background-color: red; padding: 5px; text-align: center; border: 1px solid black;">-2 на все действия с Тяжелым Ранением</p>
+                    <p class="cprtext" style="width:100%; color: white; background-color: red; padding: 5px; text-align: center; border: 1px solid black;">-2 на все действия с Тяжелым Ранением</p>
+                </div>
+                <!-- Испытание против смерти -->
+                <div class="cprinput rb">
+                    <p class="cprtext">Испытание против смерти</p>
+                    <input type="text">
                 </div>
                 <!-- Зависимости -->
                 <div class="cprinput rb">
                     <p class="cprtext">Зависимости</p>
-                    <textarea style="width:98%;" name="note" id="note" cols="30" rows="4"></textarea>
+                    <textarea style="width:100%;" name="note" id="note" cols="30" rows="4"></textarea>
                 </div>
                 <!-- Критические травмы -->
                 <div class="cprinput rb">
                     <p class="cprtext">Заметки</p>
-                    <textarea style="width:98%;" name="note" id="note" cols="30" rows="4"></textarea>
+                    <textarea style="width:100%;" name="note" id="note" cols="30" rows="4"></textarea>
                 </div>
                 <!-- Основные параметры -->
                 <div class="cprinput rb">
@@ -461,7 +466,333 @@
                                 <td class="rb"><input type="text" style="width: 100%;"></td>
                                 <td class="rb"><input type="text" style="width: 100%;"></td>
                             </tr>
+                            <tr class="rb">
+                                <th colspan="5">Наука (ИНТ)</td>
+                            </tr>
+                            <tr class="rb">
+                                <td colspan="5" class="rb"><input type="text" style="width: 100%;"></td>
+                                <td class="rb"><input type="text" style="width: 100%;"></td>
+                                <td class="rb"><input type="text" style="width: 100%;"></td>
+                                <td class="rb"><input type="text" style="width: 100%;"></td>
+                            </tr>
+                            <tr class="rb">
+                                <td colspan="5" class="rb"><input type="text" style="width: 100%;"></td>
+                                <td class="rb"><input type="text" style="width: 100%;"></td>
+                                <td class="rb"><input type="text" style="width: 100%;"></td>
+                                <td class="rb"><input type="text" style="width: 100%;"></td>
+                            </tr>
+                            <tr class="rb">
+                                <td colspan="5" class="rb">Тактика (ИНТ)</td>
+                                <td class="rb"><input type="text" style="width: 100%;"></td>
+                                <td class="rb"><input type="text" style="width: 100%;"></td>
+                                <td class="rb"><input type="text" style="width: 100%;"></td>
+                            </tr>
+                            <tr class="rb">
+                                <td colspan="5" class="rb">Выживание в пустыне (ИНТ)</td>
+                                <td class="rb"><input type="text" style="width: 100%;"></td>
+                                <td class="rb"><input type="text" style="width: 100%;"></td>
+                                <td class="rb"><input type="text" style="width: 100%;"></td>
+                            </tr>
                         </table>
+                    </div>
+                    <!-- Навыки ближнего боя -->
+                    <button class="cardbutton" data-bs-toggle="collapse" href="#collapseMS" role="button" aria-expanded="false" aria-controls="collapseExample">
+                        Навыки ближнего боя
+                    </button>
+                    <div class="collapse" id="collapseMS">
+                        <table class="rb" style="width:100%;">
+                            <tr class="rb">
+                                <td colspan="5" class="fb rb">Название</td>
+                                <td class="fb rb">УР</td>
+                                <td class="fb rb">STAT</td>
+                                <td class="fb rb">Сумм</td>
+                            </tr>
+                            <tr class="rb">
+                                <td colspan="5" class="rb"><strong>Рукопашный бой (ЛВК)</strong></td>
+                                <td class="rb"><input type="text" style="width: 100%;"></td>
+                                <td class="rb"><input type="text" style="width: 100%;"></td>
+                                <td class="rb"><input type="text" style="width: 100%;"></td>
+                            </tr>
+                            <tr class="rb">
+                                <td colspan="5" class="rb"><strong>Уклонение (ЛВК)</strong></td>
+                                <td class="rb"><input type="text" style="width: 100%;"></td>
+                                <td class="rb"><input type="text" style="width: 100%;"></td>
+                                <td class="rb"><input type="text" style="width: 100%;"></td>
+                            </tr>
+                            <tr class="rb">
+                                <td colspan="5" class="rb">Боевые искусства(*2) (ЛВК)</td>
+                                <td class="rb"><input type="text" style="width: 100%;"></td>
+                                <td class="rb"><input type="text" style="width: 100%;"></td>
+                                <td class="rb"><input type="text" style="width: 100%;"></td>
+                            </tr>
+                            <tr class="rb">
+                                <td colspan="5" class="rb">Оружие ближнего боя (ЛВК)</td>
+                                <td class="rb"><input type="text" style="width: 100%;"></td>
+                                <td class="rb"><input type="text" style="width: 100%;"></td>
+                                <td class="rb"><input type="text" style="width: 100%;"></td>
+                            </tr>
+                        </table>
+
+                    </div>
+                    <!-- Сценические навыки -->
+                    <button class="cardbutton" data-bs-toggle="collapse" href="#collapseSceneS" role="button" aria-expanded="false" aria-controls="collapseExample">
+                        Сценические навыки
+                    </button>
+                    <div class="collapse" id="collapseSceneS">
+                        <table class="rb" style="width:100%;">
+                            <tr class="rb">
+                                <td colspan="5" class="fb rb">Название</td>
+                                <td class="fb rb">УР</td>
+                                <td class="fb rb">STAT</td>
+                                <td class="fb rb">Сумм</td>
+                            </tr>
+                            <tr class="rb">
+                                <td colspan="5" class="rb">Актерское мастерство (ХАР)</td>
+                                <td class="rb"><input type="text" style="width: 100%;"></td>
+                                <td class="rb"><input type="text" style="width: 100%;"></td>
+                                <td class="rb"><input type="text" style="width: 100%;"></td>
+                            </tr>
+                            <tr class="rb">
+                                <th colspan="5">Игра на инструменте (ТЕХ)</td>
+                            </tr>
+                            <tr class="rb">
+                                <td colspan="5" class="rb"><input type="text" style="width: 100%;"></td>
+                                <td class="rb"><input type="text" style="width: 100%;"></td>
+                                <td class="rb"><input type="text" style="width: 100%;"></td>
+                                <td class="rb"><input type="text" style="width: 100%;"></td>
+                            </tr>
+                            <tr class="rb">
+                                <td colspan="5" class="rb"><input type="text" style="width: 100%;"></td>
+                                <td class="rb"><input type="text" style="width: 100%;"></td>
+                                <td class="rb"><input type="text" style="width: 100%;"></td>
+                                <td class="rb"><input type="text" style="width: 100%;"></td>
+                            </tr>
+                        </table>
+
+                    </div>
+                    <!-- Навыки дальнего боя -->
+                    <button class="cardbutton" data-bs-toggle="collapse" href="#collapseLRS" role="button" aria-expanded="false" aria-controls="collapseExample">
+                        Навыки дальнего боя
+                    </button>
+                    <div class="collapse" id="collapseLRS">
+                        <table class="rb" style="width:100%;">
+                            <tr class="rb">
+                                <td colspan="5" class="fb rb">Название</td>
+                                <td class="fb rb">УР</td>
+                                <td class="fb rb">STAT</td>
+                                <td class="fb rb">Сумм</td>
+                            </tr>
+                            <tr class="rb">
+                                <td colspan="5" class="rb">Стрельба из лука (РЕА)</td>
+                                <td class="rb"><input type="text" style="width: 100%;"></td>
+                                <td class="rb"><input type="text" style="width: 100%;"></td>
+                                <td class="rb"><input type="text" style="width: 100%;"></td>
+                            </tr>
+                            <tr class="rb">
+                                <td colspan="5" class="rb">Автоматический огонь(*2) (РЕА)</td>
+                                <td class="rb"><input type="text" style="width: 100%;"></td>
+                                <td class="rb"><input type="text" style="width: 100%;"></td>
+                                <td class="rb"><input type="text" style="width: 100%;"></td>
+                            </tr>
+                            <tr class="rb">
+                                <td colspan="5" class="rb">Пистолеты (РЕА)</td>
+                                <td class="rb"><input type="text" style="width: 100%;"></td>
+                                <td class="rb"><input type="text" style="width: 100%;"></td>
+                                <td class="rb"><input type="text" style="width: 100%;"></td>
+                            </tr>
+                            <tr class="rb">
+                                <td colspan="5" class="rb">Оружие крупного кал.(*2) (РЕА)</td>
+                                <td class="rb"><input type="text" style="width: 100%;"></td>
+                                <td class="rb"><input type="text" style="width: 100%;"></td>
+                                <td class="rb"><input type="text" style="width: 100%;"></td>
+                            </tr>
+                            <tr class="rb">
+                                <td colspan="5" class="rb">Тактическое оружие (РЕА)</td>
+                                <td class="rb"><input type="text" style="width: 100%;"></td>
+                                <td class="rb"><input type="text" style="width: 100%;"></td>
+                                <td class="rb"><input type="text" style="width: 100%;"></td>
+                            </tr>
+                        </table>
+
+                    </div>
+                    <!-- Социальные навыки -->
+                    <button class="cardbutton" data-bs-toggle="collapse" href="#collapseSocialS" role="button" aria-expanded="false" aria-controls="collapseExample">
+                        Социальные навыки
+                    </button>
+                    <div class="collapse" id="collapseSocialS">
+                        <table class="rb" style="width:100%;">
+                            <tr class="rb">
+                                <td colspan="5" class="fb rb">Название</td>
+                                <td class="fb rb">УР</td>
+                                <td class="fb rb">STAT</td>
+                                <td class="fb rb">Сумм</td>
+                            </tr>
+                            <tr class="rb">
+                                <td colspan="5" class="rb">Подкуп (ХАР)</td>
+                                <td class="rb"><input type="text" style="width: 100%;"></td>
+                                <td class="rb"><input type="text" style="width: 100%;"></td>
+                                <td class="rb"><input type="text" style="width: 100%;"></td>
+                            </tr>
+                            <tr class="rb">
+                                <td colspan="5" class="rb"><strong>Общение (ЭМП)</strong></td>
+                                <td class="rb"><input type="text" style="width: 100%;"></td>
+                                <td class="rb"><input type="text" style="width: 100%;"></td>
+                                <td class="rb"><input type="text" style="width: 100%;"></td>
+                            </tr>
+                            <tr class="rb">
+                                <td colspan="5" class="rb"><strong>Проницательность (ЭМП)</strong></td>
+                                <td class="rb"><input type="text" style="width: 100%;"></td>
+                                <td class="rb"><input type="text" style="width: 100%;"></td>
+                                <td class="rb"><input type="text" style="width: 100%;"></td>
+                            </tr>
+                            <tr class="rb">
+                                <td colspan="5" class="rb">Допрос (ХАР)</td>
+                                <td class="rb"><input type="text" style="width: 100%;"></td>
+                                <td class="rb"><input type="text" style="width: 100%;"></td>
+                                <td class="rb"><input type="text" style="width: 100%;"></td>
+                            </tr>
+                            <tr class="rb">
+                                <td colspan="5" class="rb"><strong>Убеждение (ХАР)</strong></td>
+                                <td class="rb"><input type="text" style="width: 100%;"></td>
+                                <td class="rb"><input type="text" style="width: 100%;"></td>
+                                <td class="rb"><input type="text" style="width: 100%;"></td>
+                            </tr>
+                            <tr class="rb">
+                                <td colspan="5" class="rb">Допрос (ХАР)</td>
+                                <td class="rb"><input type="text" style="width: 100%;"></td>
+                                <td class="rb"><input type="text" style="width: 100%;"></td>
+                                <td class="rb"><input type="text" style="width: 100%;"></td>
+                            </tr>
+                            <tr class="rb">
+                                <td colspan="5" class="rb">Уход за собой (ХАР)</td>
+                                <td class="rb"><input type="text" style="width: 100%;"></td>
+                                <td class="rb"><input type="text" style="width: 100%;"></td>
+                                <td class="rb"><input type="text" style="width: 100%;"></td>
+                            </tr>
+                            <tr class="rb">
+                                <td colspan="5" class="rb">Знаток Улиц (ХАР)</td>
+                                <td class="rb"><input type="text" style="width: 100%;"></td>
+                                <td class="rb"><input type="text" style="width: 100%;"></td>
+                                <td class="rb"><input type="text" style="width: 100%;"></td>
+                            </tr>
+                            <tr class="rb">
+                                <td colspan="5" class="rb">Торговля (ХАР)</td>
+                                <td class="rb"><input type="text" style="width: 100%;"></td>
+                                <td class="rb"><input type="text" style="width: 100%;"></td>
+                                <td class="rb"><input type="text" style="width: 100%;"></td>
+                            </tr>
+                            <tr class="rb">
+                                <td colspan="5" class="rb">Гардероб и стиль (ХАР)</td>
+                                <td class="rb"><input type="text" style="width: 100%;"></td>
+                                <td class="rb"><input type="text" style="width: 100%;"></td>
+                                <td class="rb"><input type="text" style="width: 100%;"></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <!-- Технические навыки -->
+                    <button class="cardbutton" data-bs-toggle="collapse" href="#collapseTechS" role="button" aria-expanded="false" aria-controls="collapseExample">
+                        Технические навыки
+                    </button>
+                    <div class="collapse" id="collapseTechS">
+                        <table class="rb" style="width:100%;">
+                            <tr class="rb">
+                                <td colspan="5" class="fb rb">Название</td>
+                                <td class="fb rb">УР</td>
+                                <td class="fb rb">STAT</td>
+                                <td class="fb rb">Сумм</td>
+                            </tr>
+                            <tr class="rb">
+                                <td colspan="5" class="rb">Авиационные технологии (ТЕХ)</td>
+                                <td class="rb"><input type="text" style="width: 100%;"></td>
+                                <td class="rb"><input type="text" style="width: 100%;"></td>
+                                <td class="rb"><input type="text" style="width: 100%;"></td>
+                            </tr>
+                            <tr class="rb">
+                                <td colspan="5" class="rb">Знание техники (ТЕХ)</td>
+                                <td class="rb"><input type="text" style="width: 100%;"></td>
+                                <td class="rb"><input type="text" style="width: 100%;"></td>
+                                <td class="rb"><input type="text" style="width: 100%;"></td>
+                            </tr>
+                            <tr class="rb">
+                                <td colspan="5" class="rb">Кибертехника (ТЕХ)</td>
+                                <td class="rb"><input type="text" style="width: 100%;"></td>
+                                <td class="rb"><input type="text" style="width: 100%;"></td>
+                                <td class="rb"><input type="text" style="width: 100%;"></td>
+                            </tr>
+                            <tr class="rb">
+                                <td colspan="5" class="rb">Подрывник(*2) (ТЕХ)</td>
+                                <td class="rb"><input type="text" style="width: 100%;"></td>
+                                <td class="rb"><input type="text" style="width: 100%;"></td>
+                                <td class="rb"><input type="text" style="width: 100%;"></td>
+                            </tr>
+                            <tr class="rb">
+                                <td colspan="5" class="rb">Электроника/ Безопасность(*2) (ТЕХ)</td>
+                                <td class="rb"><input type="text" style="width: 100%;"></td>
+                                <td class="rb"><input type="text" style="width: 100%;"></td>
+                                <td class="rb"><input type="text" style="width: 100%;"></td>
+                            </tr>
+                            <tr class="rb">
+                                <td colspan="5" class="rb"><strong>Первая помощь (ТЕХ)</strong></td>
+                                <td class="rb"><input type="text" style="width: 100%;"></td>
+                                <td class="rb"><input type="text" style="width: 100%;"></td>
+                                <td class="rb"><input type="text" style="width: 100%;"></td>
+                            </tr>
+                            <tr class="rb">
+                                <td colspan="5" class="rb">Фальсификация (ТЕХ)</td>
+                                <td class="rb"><input type="text" style="width: 100%;"></td>
+                                <td class="rb"><input type="text" style="width: 100%;"></td>
+                                <td class="rb"><input type="text" style="width: 100%;"></td>
+                            </tr>
+                            <tr class="rb">
+                                <td colspan="5" class="rb">Автомеханика (ТЕХ)</td>
+                                <td class="rb"><input type="text" style="width: 100%;"></td>
+                                <td class="rb"><input type="text" style="width: 100%;"></td>
+                                <td class="rb"><input type="text" style="width: 100%;"></td>
+                            </tr>
+                            <tr class="rb">
+                                <td colspan="5" class="rb">Художественное ремесло (ТЕХ)</td>
+                                <td class="rb"><input type="text" style="width: 100%;"></td>
+                                <td class="rb"><input type="text" style="width: 100%;"></td>
+                                <td class="rb"><input type="text" style="width: 100%;"></td>
+                            </tr>
+                            <tr class="rb">
+                                <td colspan="5" class="rb">Парамедик(*2) (ТЕХ)</td>
+                                <td class="rb"><input type="text" style="width: 100%;"></td>
+                                <td class="rb"><input type="text" style="width: 100%;"></td>
+                                <td class="rb"><input type="text" style="width: 100%;"></td>
+                            </tr>
+                            <tr class="rb">
+                                <td colspan="5" class="rb">Кино- и фототехника (ТЕХ)</td>
+                                <td class="rb"><input type="text" style="width: 100%;"></td>
+                                <td class="rb"><input type="text" style="width: 100%;"></td>
+                                <td class="rb"><input type="text" style="width: 100%;"></td>
+                            </tr>
+                            <tr class="rb">
+                                <td colspan="5" class="rb">Взлом замков (ТЕХ)</td>
+                                <td class="rb"><input type="text" style="width: 100%;"></td>
+                                <td class="rb"><input type="text" style="width: 100%;"></td>
+                                <td class="rb"><input type="text" style="width: 100%;"></td>
+                            </tr>
+                            <tr class="rb">
+                                <td colspan="5" class="rb">Карманник (ТЕХ)</td>
+                                <td class="rb"><input type="text" style="width: 100%;"></td>
+                                <td class="rb"><input type="text" style="width: 100%;"></td>
+                                <td class="rb"><input type="text" style="width: 100%;"></td>
+                            </tr>
+                            <tr class="rb">
+                                <td colspan="5" class="rb">Морские технологии (ТЕХ)</td>
+                                <td class="rb"><input type="text" style="width: 100%;"></td>
+                                <td class="rb"><input type="text" style="width: 100%;"></td>
+                                <td class="rb"><input type="text" style="width: 100%;"></td>
+                            </tr>
+                            <tr class="rb">
+                                <td colspan="5" class="rb">Оружейник (ТЕХ)</td>
+                                <td class="rb"><input type="text" style="width: 100%;"></td>
+                                <td class="rb"><input type="text" style="width: 100%;"></td>
+                                <td class="rb"><input type="text" style="width: 100%;"></td>
+                            </tr>
+                        </table>
+
                     </div>
                 </div>
             </div>
