@@ -6,8 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
     <link rel="stylesheet" href="style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
     <title>CPR Form Page</title>
 </head>
 <body class="bodyfont">
@@ -15,73 +13,75 @@
         <a style="padding: 5px;" href="#"><img src="hamburger.png" alt="" style="height: 50px;"></a>
     </header>
     <main style="margin:0;">
+    <form id="char_form">
+        <button type="submit">Submit</button>
         <div class="baseinfo rb">
             <div class="profpic rb"><img src="pic.jpg" alt=""></div>
             <!-- Базовая информация -->
             <div class="bi_forms rb">
-                <!-- Имя -->
+                <!-- Имя* -->
                 <div class="cprinput rb">
                     <p class="cprtext">Имя</p>
-                    <input type="text">
+                    <input type="text" name="CharacterName">
                 </div>
-                <!-- Псевдонимы -->
+                <!-- Псевдонимы* -->
                 <div class="cprinput rb">
                     <p class="cprtext">Псевдонимы</p>
-                    <textarea style="width:100%;" name="note" id="note" cols="30" rows="4"></textarea>
+                    <textarea style="width:100%;" name="CharacterNickNames" cols="30" rows="4"></textarea>
                 </div>
-                <!-- Роль -->
+                <!-- Роль* -->
                 <div class="cprinput rb">
                     <p class="cprtext">Роль</p>
-                    <input type="text">
+                    <input type="text" name="Role">
                 </div>
-                <!-- Особая способность и ее ранг -->
+                <!-- Особая способность и ее ранг* -->
                 <div class="cprinput rb" style="display: flex; flex-direction: row; align-items: center;">
                     <p class="cprtext" style="padding: 4px;">Особая способность</p>
-                    <input type="text">
+                    <input type="text" name="SpecialAbility">
                     <p class="cprtext" style="padding: 4px;">Ранг</p>
-                    <input type="text">
+                    <input type="text" name="SA_Rank">
                 </div>
-                <!-- Заметки -->
+                <!-- Заметки* -->
                 <div class="cprinput rb">
                     <p class="cprtext">Заметки</p>
-                    <textarea style="width:100%;" name="note" id="note" cols="30" rows="4"></textarea>
+                    <textarea style="width:100%;" name="CharacterNotes" cols="30" rows="4"></textarea>
                 </div>
-                <!-- Пункты человечности -->
+                <!-- Пункты человечности* -->
                 <div class="cprinput rb" style="display: flex; flex-direction: row; align-items: center;">
                     <p style="padding: 4px;" class="cprtext">Человечность</p>
-                    <input type="text">
+                    <input type="text" name="CurrentHumanityPoints">
                     <p class="cprtext" style="padding: 4px;">из</p>
-                    <input type="text">
+                    <input type="text" name="MaximumHumanityPoints">
                 </div>
-                <!-- Пункты здоровья -->
+                <!-- Пункты здоровья* -->
                 <div class="cprinput rb" style="display: flex; flex-direction: row; align-items: center;">
                     <p style="padding: 4px;" class="cprtext">Пункты здоровья</p>
-                    <input type="text">
+                    <input type="text" name="CurrentHealthPoints">
                     <p class="cprtext" style="padding: 4px;">из</p>
-                    <input type="text">
+                    <input type="text" name="MaximumHealthPoints">
                 </div>
-                <!-- Тяжелое ранение -->
+                <!-- Тяжелое ранение* -->
                 <div class="cprinput rb">
                     <p class="cprtext">Тяжелое ранение</p>
-                    <input type="text">
+                    <input type="text" name="HeavyWound">
                     <p class="cprtext" style="width:100%; color: white; background-color: red; padding: 5px; text-align: center; border: 1px solid black;">-2 на все действия с Тяжелым Ранением</p>
                 </div>
-                <!-- Испытание против смерти -->
+                <!-- Испытание против смерти* -->
                 <div class="cprinput rb">
                     <p class="cprtext">Испытание против смерти</p>
-                    <input type="text">
+                    <input type="text" name="ChallengeVSDeath">
                 </div>
-                <!-- Зависимости -->
+                <!-- Зависимости* -->
                 <div class="cprinput rb">
                     <p class="cprtext">Зависимости</p>
-                    <textarea style="width:100%;" name="note" id="note" cols="30" rows="4"></textarea>
+                    <textarea style="width:100%;" name="Addictions" cols="30" rows="4"></textarea>
                 </div>
-                <!-- Критические травмы -->
+                <!-- Критические травмы* -->
                 <div class="cprinput rb">
                     <p class="cprtext">Заметки</p>
-                    <textarea style="width:100%;" name="note" id="note" cols="30" rows="4"></textarea>
+                    <textarea style="width:100%;" name="CritInjuries" cols="30" rows="4"></textarea>
                 </div>
-                <!-- Основные параметры -->
+                <!-- Основные параметры* -->
                 <div class="cprinput rb">
                     <button class="cardbutton" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
                         Основные параметры
@@ -90,48 +90,48 @@
                         <div class="mpblock rb">
                             <div class="cpr_mpinput rb">
                                 <p class="cprtext">ИНТ</p>
-                                <input type="text">
+                                <input type="text" name="mp">
                             </div>
                             <div class="cpr_mpinput rb">
                                 <p class="cprtext">РЕА</p>
-                                <input type="text">
+                                <input type="text" name="mp">
                             </div>
                             <div class="cpr_mpinput rb">
                                 <p class="cprtext">ЛВК</p>
-                                <input type="text">
+                                <input type="text" name="mp">
                             </div>
                             <div class="cpr_mpinput rb">
                                 <p class="cprtext">ТЕХ</p>
-                                <input type="text">
+                                <input type="text" name="mp">
                             </div>
                             <div class="cpr_mpinput rb">
                                 <p class="cprtext">ХАР</p>
-                                <input type="text">
+                                <input type="text" name="mp">
                             </div>
                             <div class="cpr_mpinput rb">
                                 <p class="cprtext">ВОЛЯ</p>
-                                <input type="text">
+                                <input type="text" name="mp">
                             </div>
                             <div class="cpr_mpinput rb">
                                 <p class="cprtext">УДЧ</p>
-                                <input type="text">
+                                <input type="text" name="mp">
                             </div>
                             <div class="cpr_mpinput rb">
                                 <p class="cprtext">СКО</p>
-                                <input type="text">
+                                <input type="text" name="mp">
                             </div>
                             <div class="cpr_mpinput rb">
                                 <p class="cprtext">ТЕЛ</p>
-                                <input type="text">
+                                <input type="text" name="mp">
                             </div>
                             <div class="cpr_mpinput rb">
                                 <p class="cprtext">ЭМП</p>
-                                <input type="text">
+                                <input type="text" name="mp">
                             </div>
                         </div>
                     </div>
                 </div>
-                <!-- Оружие и броня -->
+                <!-- Оружие и броня* -->
                 <div class="cprinput rb">
                     <h2 style="text-align: center;">Оружие и броня</h2>
                     <table class="nb rb" style="width:100%;">
@@ -142,18 +142,18 @@
                         </tr>
                         <tr class="rb">
                             <td colspan="3" class="rb">Защита головы</td>
-                            <td class="rb"><input type="text"></td>
-                            <td class="rb"><input type="text"></td>
+                            <td class="rb"><input type="text" name="asa"></td>
+                            <td class="rb"><input type="text" name="ap"></td>
                         </tr>
                         <tr class="rb">
                             <td colspan="3" class="rb">Защита туловища</td>
-                            <td class="rb"><input type="text"></td>
-                            <td class="rb"><input type="text"></td>
+                            <td class="rb"><input type="text" name="asa"></td>
+                            <td class="rb"><input type="text" name="ap"></td>
                         </tr>
                         <tr class="rb">
                             <td colspan="3" class="rb">Щит</td>
-                            <td class="rb"><input type="text"></td>
-                            <td class="rb"><input type="text"></td>
+                            <td class="rb"><input type="text" name="asa"></td>
+                            <td class="rb"><input type="text" name="ap"></td>
                         </tr>
                     </table>
                     <p class="cprtext" style="width:100%; color: white; background-color: red; padding: 5px; text-align: center; border: 1px solid black;">Штрафы применяются к РЕА, ЛВК и СКО</p>
@@ -171,46 +171,46 @@
                                 <td colspan="4" class="fb rb">Заметки</td>
                             </tr>
                             <tr>
-                                <td colspan="4" class="rb"><input type="text"></td>
-                                <td colspan="1" class="rb"><input type="text"></td>
-                                <td colspan="1" class="rb"><input type="text"></td>
-                                <td colspan="1" class="rb"><input type="text"></td>
-                                <td colspan="4" class="rb"><input type="text"></td>
+                                <td colspan="4" class="rb"><input type="text" name="wn"></td>
+                                <td colspan="1" class="rb"><input type="text" name="wd"></td>
+                                <td colspan="1" class="rb"><input type="text" name="wa"></td>
+                                <td colspan="1" class="rb"><input type="text" name="wrof"></td>
+                                <td colspan="4" class="rb"><input type="text" name="wnotes"></td>
                             </tr>
                             <tr>
-                                <td colspan="4" class="rb"><input type="text"></td>
-                                <td colspan="1" class="rb"><input type="text"></td>
-                                <td colspan="1" class="rb"><input type="text"></td>
-                                <td colspan="1" class="rb"><input type="text"></td>
-                                <td colspan="4" class="rb"><input type="text"></td>
+                                <td colspan="4" class="rb"><input type="text" name="wn"></td>
+                                <td colspan="1" class="rb"><input type="text" name="wd"></td>
+                                <td colspan="1" class="rb"><input type="text" name="wa"></td>
+                                <td colspan="1" class="rb"><input type="text" name="wrof"></td>
+                                <td colspan="4" class="rb"><input type="text" name="wnotes"></td>
                             </tr>
                             <tr>
-                                <td colspan="4" class="rb"><input type="text"></td>
-                                <td colspan="1" class="rb"><input type="text"></td>
-                                <td colspan="1" class="rb"><input type="text"></td>
-                                <td colspan="1" class="rb"><input type="text"></td>
-                                <td colspan="4" class="rb"><input type="text"></td>
+                                <td colspan="4" class="rb"><input type="text" name="wn"></td>
+                                <td colspan="1" class="rb"><input type="text" name="wd"></td>
+                                <td colspan="1" class="rb"><input type="text" name="wa"></td>
+                                <td colspan="1" class="rb"><input type="text" name="wrof"></td>
+                                <td colspan="4" class="rb"><input type="text" name="wnotes"></td>
                             </tr>
                             <tr>
-                                <td colspan="4" class="rb"><input type="text"></td>
-                                <td colspan="1" class="rb"><input type="text"></td>
-                                <td colspan="1" class="rb"><input type="text"></td>
-                                <td colspan="1" class="rb"><input type="text"></td>
-                                <td colspan="4" class="rb"><input type="text"></td>
+                                <td colspan="4" class="rb"><input type="text" name="wn"></td>
+                                <td colspan="1" class="rb"><input type="text" name="wd"></td>
+                                <td colspan="1" class="rb"><input type="text" name="wa"></td>
+                                <td colspan="1" class="rb"><input type="text" name="wrof"></td>
+                                <td colspan="4" class="rb"><input type="text" name="wnotes"></td>
                             </tr>
                             <tr>
-                                <td colspan="4" class="rb"><input type="text"></td>
-                                <td colspan="1" class="rb"><input type="text"></td>
-                                <td colspan="1" class="rb"><input type="text"></td>
-                                <td colspan="1" class="rb"><input type="text"></td>
-                                <td colspan="4" class="rb"><input type="text"></td>
+                                <td colspan="4" class="rb"><input type="text" name="wn"></td>
+                                <td colspan="1" class="rb"><input type="text" name="wd"></td>
+                                <td colspan="1" class="rb"><input type="text" name="wa"></td>
+                                <td colspan="1" class="rb"><input type="text" name="wrof"></td>
+                                <td colspan="4" class="rb"><input type="text" name="wnotes"></td>
                             </tr>
                             <tr>
-                                <td colspan="4" class="rb"><input type="text"></td>
-                                <td colspan="1" class="rb"><input type="text"></td>
-                                <td colspan="1" class="rb"><input type="text"></td>
-                                <td colspan="1" class="rb"><input type="text"></td>
-                                <td colspan="4" class="rb"><input type="text"></td>
+                                <td colspan="4" class="rb"><input type="text" name="wn"></td>
+                                <td colspan="1" class="rb"><input type="text" name="wd"></td>
+                                <td colspan="1" class="rb"><input type="text" name="wa"></td>
+                                <td colspan="1" class="rb"><input type="text" name="wrof"></td>
+                                <td colspan="4" class="rb"><input type="text" name="wnotes"></td>
                             </tr>
                         </table>
                     </div>
@@ -1288,6 +1288,10 @@
             </div>
             </div>
         </div>
+    </form>
     </main>
 </body>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
+<script src="script.js"></script>
 </html>
