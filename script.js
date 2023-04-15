@@ -128,22 +128,22 @@ function handleSubmit(event) {
       }
     }
     value.Reputation = parseInt(data.getAll("rep"));
-    value.AchievingRep = data.getAll("achrep");
-    value.CurrentUpgradePoints = data.getAll("cup");
-    value.MaximumUpgradePoints = data.getAll("mup");
+    value.AchievingRep = data.getAll("achrep")[0].split("\n").join(" ");
+    value.CurrentUpgradePoints = parseInt(data.getAll("cup"));
+    value.MaximumUpgradePoints = parseInt(data.getAll("mup"));
     // Жизненный путь
-    value.CultureLegacy = data.getAll("cl");
-    value.Personality = data.getAll("persona");
-    value.ClothesStyle = data.getAll("clothes_style");
-    value.Haircut = data.getAll("haircut");
-    value.MostValuable = data.getAll("most_valuable");
-    value.Feel2People = data.getAll("feel_to_people");
-    value.ClosestPeople = data.getAll("closest_people");
-    value.ValuableThing = data.getAll("valuable_thing");
-    value.FamilyHistory = data.getAll("family_history");
-    value.Surroundings = data.getAll("surroundings");
-    value.FamilyCrysis = data.getAll("family_crysis");
-    value.LifeGoals = data.getAll("life_goals");
+    value.CultureLegacy = data.getAll("cl")[0].split("\n").join(" ");
+    value.Personality = data.getAll("persona")[0];
+    value.ClothesStyle = data.getAll("clothes_style")[0];
+    value.Haircut = data.getAll("haircut")[0];
+    value.MostValuable = data.getAll("most_valuable")[0];
+    value.Feel2People = data.getAll("feel_to_people")[0];
+    value.ClosestPeople = data.getAll("closest_people")[0];
+    value.ValuableThing = data.getAll("valuable_thing")[0];
+    value.FamilyHistory = data.getAll("family_history")[0];
+    value.Surroundings = data.getAll("surroundings")[0];
+    value.FamilyCrysis = data.getAll("family_crysis")[0];
+    value.LifeGoals = data.getAll("life_goals")[0];
     value.Friends = {
       "1": data.getAll("friend")[0],
       "2": data.getAll("friend")[1],
@@ -160,7 +160,80 @@ function handleSubmit(event) {
       "1": {"Who": data.getAll("who")[0], "Reason": data.getAll("reason")[0],"CanDo": data.getAll("can_do")[0],"ToKill": data.getAll("to_kill")[0]},
       "2": {"Who": data.getAll("who")[1], "Reason": data.getAll("reason")[1],"CanDo": data.getAll("can_do")[1],"ToKill": data.getAll("to_kill")[1]},
       "3": {"Who": data.getAll("who")[2], "Reason": data.getAll("reason")[2],"CanDo": data.getAll("can_do")[2],"ToKill": data.getAll("to_kill")[2]},
-      "4": {"Who": data.getAll("who")[3], "Reason": data.getAll("reason")[3],"CanDo": data.getAll("can_do")[3],"ToKill": data.getAll("to_kill")[3]},
+    };
+    value.Fashion = data.getAll("fashion")[0].split("\n").join(" ");
+    value.RoleLivePath = data.getAll("rlp")[0].split("\n").join(" ");
+    value.Housing = data.getAll("housing")[0].split("\n").join(" ");
+    value.Rent = data.getAll("rent")[0].split("\n").join(" ");
+    value.Lifestyle = data.getAll("lifestyle")[0].split("\n").join(" ");
+    value.Gear = {
+      "1": {"Name":data.getAll("gear_name")[0] ,"Note":data.getAll("gear_note")[0]},
+      "2": {"Name":data.getAll("gear_name")[1] ,"Note":data.getAll("gear_note")[1]},
+      "3": {"Name":data.getAll("gear_name")[2] ,"Note":data.getAll("gear_note")[2]},
+      "4": {"Name":data.getAll("gear_name")[3] ,"Note":data.getAll("gear_note")[3]},
+      "5": {"Name":data.getAll("gear_name")[4] ,"Note":data.getAll("gear_note")[4]},
+      "6": {"Name":data.getAll("gear_name")[5] ,"Note":data.getAll("gear_note")[5]},
+      "7": {"Name":data.getAll("gear_name")[6] ,"Note":data.getAll("gear_note")[6]},
+      "8": {"Name":data.getAll("gear_name")[7] ,"Note":data.getAll("gear_note")[7]},
+      "9": {"Name":data.getAll("gear_name")[8] ,"Note":data.getAll("gear_note")[8]},
+      "10": {"Name":data.getAll("gear_name")[9] ,"Note":data.getAll("gear_note")[9]},
+      "11": {"Name":data.getAll("gear_name")[10] ,"Note":data.getAll("gear_note")[10]},
+      "12": {"Name":data.getAll("gear_name")[11] ,"Note":data.getAll("gear_note")[11]},
+      "13": {"Name":data.getAll("gear_name")[12] ,"Note":data.getAll("gear_note")[12]},
+      "14": {"Name":data.getAll("gear_name")[13] ,"Note":data.getAll("gear_note")[13]},
+      "15": {"Name":data.getAll("gear_name")[14] ,"Note":data.getAll("gear_note")[14]},
+      "16": {"Name":data.getAll("gear_name")[15] ,"Note":data.getAll("gear_note")[15]},
+      "17": {"Name":data.getAll("gear_name")[16] ,"Note":data.getAll("gear_note")[16]},
+      "18": {"Name":data.getAll("gear_name")[17] ,"Note":data.getAll("gear_note")[17]},
+    };
+    value.Ammo = parseInt(data.getAll("ammo"));
+    value.Cash = parseInt(data.getAll("cash"));
+    value.Cyberware = {
+      "Cyberaudio": {
+        "isCyberaudio": data.getAll("iscyberaudio")[0],
+        "1": {"Name": data.getAll("cyb_au_name")[0], "Note": data.getAll("cyb_au_note")[0]},
+        "2": {"Name": data.getAll("cyb_au_name")[1], "Note": data.getAll("cyb_au_note")[1]},
+        "3": {"Name": data.getAll("cyb_au_name")[2], "Note": data.getAll("cyb_au_note")[2]},
+      },
+      "Cybereyes": {
+        "Left" :{
+          "isCybereye": data.getAll("iscybereye")[0],
+          "1": {"Name": data.getAll("cyb_eye_name")[0], "Note": data.getAll("cyb_eye_note")[0]},
+          "2": {"Name": data.getAll("cyb_eye_name")[1], "Note": data.getAll("cyb_eye_note")[1]},
+          "3": {"Name": data.getAll("cyb_eye_name")[2], "Note": data.getAll("cyb_eye_note")[2]},
+        },
+        "Right":{
+          "isCybereye": data.getAll("iscybereye")[1],
+          "1": {"Name": data.getAll("cyb_eye_name")[3], "Note": data.getAll("cyb_eye_note")[3]},
+          "2": {"Name": data.getAll("cyb_eye_name")[4], "Note": data.getAll("cyb_eye_note")[4]},
+          "3": {"Name": data.getAll("cyb_eye_name")[5], "Note": data.getAll("cyb_eye_note")[5]},
+        },
+      },
+      "Cyberarms": {
+        "Left" :{
+          "isCyberarm": data.getAll("iscyberarm")[0],
+          "1": {"Name": data.getAll("cyb_arm_name")[0], "Note": data.getAll("cyb_arm_note")[0]},
+          "2": {"Name": data.getAll("cyb_arm_name")[1], "Note": data.getAll("cyb_arm_note")[1]},
+          "3": {"Name": data.getAll("cyb_arm_name")[2], "Note": data.getAll("cyb_arm_note")[2]},
+        },
+        "Right":{
+          "isCyberarm": data.getAll("iscyberarm")[1],
+          "1": {"Name": data.getAll("cyb_arm_name")[3], "Note": data.getAll("cyb_arm_note")[3]},
+          "2": {"Name": data.getAll("cyb_arm_name")[4], "Note": data.getAll("cyb_arm_note")[4]},
+          "3": {"Name": data.getAll("cyb_arm_name")[5], "Note": data.getAll("cyb_arm_note")[5]},
+        },
+      },
+      "NeuralLink": {
+        "isNeuralLink": data.getAll("isneurallink")[1],
+        "1": {"Name": data.getAll("neu_link_name")[0], "Note": data.getAll("neu_link_note")[0]},
+        "2": {"Name": data.getAll("neu_link_name")[1], "Note": data.getAll("neu_link_note")[1]},
+        "3": {"Name": data.getAll("neu_link_name")[2], "Note": data.getAll("neu_link_note")[2]},
+      },
+      "Cyberlegs": {},
+      "InternalCyberware": {},
+      "ExternalCyberware": {},
+      "Fashionware": {},
+      "Borgware": {},
     };
     console.log({ value });
   }
