@@ -244,25 +244,21 @@ function handleSubmit(event) {
         },
       },
       "InternalCyberware": {
-        "isInterCyberware": data.getAll("is_int_cyb_ware")[0],
-        "1": {"Name": data.getAll("ext_cyb_ware_name")[0], "Note": data.getAll("ext_cyb_ware_note")[0]},
-        "2": {"Name": data.getAll("ext_cyb_ware_name")[1], "Note": data.getAll("ext_cyb_ware_note")[1]},
-        "3": {"Name": data.getAll("ext_cyb_ware_name")[2], "Note": data.getAll("ext_cyb_ware_note")[2]},
+        "1": {"Name": data.getAll("int_cyb_ware_name")[0], "Note": data.getAll("ext_cyb_ware_note")[0]},
+        "2": {"Name": data.getAll("int_cyb_ware_name")[1], "Note": data.getAll("ext_cyb_ware_note")[1]},
+        "3": {"Name": data.getAll("int_cyb_ware_name")[2], "Note": data.getAll("ext_cyb_ware_note")[2]},
       },
       "ExternalCyberware": {
-        "isExterCyberWare": data.getAll("is_ext_cyb_ware")[0],
         "1": {"Name": data.getAll("ext_cyb_ware_name")[0], "Note": data.getAll("ext_cyb_ware_note")[0]},
         "2": {"Name": data.getAll("ext_cyb_ware_name")[1], "Note": data.getAll("ext_cyb_ware_note")[1]},
         "3": {"Name": data.getAll("ext_cyb_ware_name")[2], "Note": data.getAll("ext_cyb_ware_note")[2]},
       },
       "Fashionware": {
-        "isFashionWare": data.getAll("isfashware")[0],
         "1": {"Name": data.getAll("fash_ware_name")[0], "Note": data.getAll("fash_ware_note")[0]},
         "2": {"Name": data.getAll("fash_ware_name")[1], "Note": data.getAll("fash_ware_note")[1]},
         "3": {"Name": data.getAll("fash_ware_name")[2], "Note": data.getAll("fash_ware_note")[2]},
       },
       "Borgware": {
-        "isBorgWare": data.getAll("isborgware")[0],
         "1": {"Name": data.getAll("borg_ware_name")[0], "Note": data.getAll("borg_ware_note")[0]},
         "2": {"Name": data.getAll("borg_ware_name")[1], "Note": data.getAll("borg_ware_note")[1]},
         "3": {"Name": data.getAll("borg_ware_name")[2], "Note": data.getAll("borg_ware_note")[2]},
