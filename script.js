@@ -3,6 +3,7 @@ function handleSubmit(event) {
     event.preventDefault();
     const data = new FormData(event.target);
     const value = Object.fromEntries(data.entries());
+    value.CharacterName = data.getAll("CharacterName")[0];
     value.MainParameters = {
       "Intelligence": parseInt(data.getAll("mp")[0]),
       "Reaction": parseInt(data.getAll("mp")[1]),
