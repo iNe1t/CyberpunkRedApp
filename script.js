@@ -1,3 +1,4 @@
+
 function handleSubmit(event) {
     event.preventDefault();
     const data = new FormData(event.target);
@@ -264,9 +265,9 @@ function handleSubmit(event) {
         "3": {"Name": data.getAll("borg_ware_name")[2], "Note": data.getAll("borg_ware_note")[2]},
       },
     };
-    console.log({ value });
+    var blob = new Blob([JSON.stringify(value)], {type: "application/json"});
+    saveAs(blob, "YourCharacter.json");
   }
-  
 const form = document.getElementById("char_form");
 if(form) {
   form.addEventListener('submit', handleSubmit);
