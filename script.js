@@ -3,7 +3,18 @@ function handleSubmit(event) {
     event.preventDefault();
     const data = new FormData(event.target);
     const value = Object.fromEntries(data.entries());
+
     value.CharacterName = data.getAll("CharacterName")[0];
+    value.CharacterNickNames = data.getAll("CharacterNickNames")[0].split("\n").join("\n");
+    value.Role = data.getAll("Role")[0];
+    value.SpecialAbility = data.getAll("SpecialAbility")[0];
+    value.SA_Rank = parseInt(data.getAll("SA_Rank")[0]);
+    value.CharacterNotes = data.getAll("CharacterNotes")[0].split("\n").join("\n");
+    value.CurrentHumanityPoints = parseInt(data.getAll("CurrentHumanityPoints")[0]);
+    value.MaximumHumanityPoints = parseInt(data.getAll("MaximumHumanityPoints")[0]);
+    value.CurrentHealthPoints = parseInt(data.getAll("CurrentHealthPoints")[0]);
+    value.MaximumHealthPoints = parseInt(data.getAll("MaximumHealthPoints")[0]);
+    value.CritInjuries = parseInt(data.getAll("CritInjuries")[0]);
     value.MainParameters = {
       "Intelligence": parseInt(data.getAll("mp")[0]),
       "Reaction": parseInt(data.getAll("mp")[1]),
@@ -130,11 +141,11 @@ function handleSubmit(event) {
       }
     }
     value.Reputation = parseInt(data.getAll("rep"));
-    value.AchievingRep = data.getAll("achrep")[0].split("\n").join(" ");
+    value.AchievingRep = data.getAll("achrep")[0].split("\n").join("\n");
     value.CurrentUpgradePoints = parseInt(data.getAll("cup"));
     value.MaximumUpgradePoints = parseInt(data.getAll("mup"));
     // Жизненный путь
-    value.CultureLegacy = data.getAll("cl")[0].split("\n").join(" ");
+    value.CultureLegacy = data.getAll("cl")[0].split("\n").join("\n");
     value.Personality = data.getAll("persona")[0];
     value.ClothesStyle = data.getAll("clothes_style")[0];
     value.Haircut = data.getAll("haircut")[0];
@@ -163,11 +174,11 @@ function handleSubmit(event) {
       "2": {"Who": data.getAll("who")[1], "Reason": data.getAll("reason")[1],"CanDo": data.getAll("can_do")[1],"ToKill": data.getAll("to_kill")[1]},
       "3": {"Who": data.getAll("who")[2], "Reason": data.getAll("reason")[2],"CanDo": data.getAll("can_do")[2],"ToKill": data.getAll("to_kill")[2]},
     };
-    value.Fashion = data.getAll("fashion")[0].split("\n").join(" ");
-    value.RoleLivePath = data.getAll("rlp")[0].split("\n").join(" ");
-    value.Housing = data.getAll("housing")[0].split("\n").join(" ");
-    value.Rent = data.getAll("rent")[0].split("\n").join(" ");
-    value.Lifestyle = data.getAll("lifestyle")[0].split("\n").join(" ");
+    value.Fashion = data.getAll("fashion")[0].split("\n").join("\n");
+    value.RoleLivePath = data.getAll("rlp")[0].split("\n").join("\n");
+    value.Housing = data.getAll("housing")[0].split("\n").join("\n");
+    value.Rent = data.getAll("rent")[0].split("\n").join("\n");
+    value.Lifestyle = data.getAll("lifestyle")[0].split("\n").join("\n");
     value.Gear = {
       "1": {"Name":data.getAll("gear_name")[0] ,"Note":data.getAll("gear_note")[0]},
       "2": {"Name":data.getAll("gear_name")[1] ,"Note":data.getAll("gear_note")[1]},
@@ -267,7 +278,8 @@ function handleSubmit(event) {
       },
     };
     var blob = new Blob([JSON.stringify(value)], {type: "application/json"});
-    saveAs(blob, "YourCharacter.json");
+    var fn = document.getElementsByName("CharacterName")[0].value + ".json";
+    saveAs(blob, fn);
   }
 const form = document.getElementById("char_form");
 if(form) {
